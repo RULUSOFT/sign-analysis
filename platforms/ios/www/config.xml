@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='utf-8'?>
+<widget id="com.rulusoft.sign-analysis" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+    <name>SignAnalysis</name>
+    <description>
+        Esta aplicación permite capturar una firma y enviarla en un correo a la Dr. Carmen Díez Pérez, psicologa titulada, que se encargará de responder al correo con el análisis de la firma.
+    </description>
+    <author email="rulusoft@gmail.com" href="http://">
+        RULUSOFT
+    </author>
+    <content src="index.html" />
+    <access origin="*" />
+</widget>
