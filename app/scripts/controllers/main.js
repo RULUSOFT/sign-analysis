@@ -21,6 +21,7 @@ angular.module('SignAnalysis').controller('MainCtrl', function($scope, SaveServi
 	$scope.saveData = function(){
 		console.log('Llamo a saveData');
 		SaveService.saveUser($scope.user);
+		$scope.pp = $scope.user.signature;
 	};
 
 });

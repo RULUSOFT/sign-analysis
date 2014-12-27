@@ -86,6 +86,7 @@ angular.module('SignAnalysis',[])
                           displayOnly: true
                         }); 
         // regenerate the signature onto the canvas
+        console.log('Val: ' + val);
         sigPadAPI.regenerate(val);
         // convert the canvas to a PNG (Newer versions of Chrome, FF, and Safari only.)
         scope.pic = sigPadAPI.getSignatureImage();

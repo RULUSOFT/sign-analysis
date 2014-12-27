@@ -12,6 +12,9 @@ angular.module('SignAnalysis')
   	
   	this.saveUser = function(user){
   		console.log(user);
+  		window.localStorage[user.firstName] = JSON.stringify(user);
+  		var userRecuperado = JSON.parse(window.localStorage[user.firstName]);
+  		console.log(userRecuperado.lastName);
   	};
 
   });
