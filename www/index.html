@@ -54,7 +54,15 @@
 				</form>
 				
 				
-				<regensigpad sigdata="{{pp}}"></regensigpad>
+				<regensigpad sigdata="{{user.signature}}"></regensigpad>
+				
+				<input  type="button"
+						class="btn span2"
+						value="Add Step"
+						ng-click="addStep()"/>
+						<input  type="button"
+						class="btn btn-primary pan2 pull-right"
+						value="Remove Step" ng-click="removeStep()"/>
 				
 				
 			</ion-content>
