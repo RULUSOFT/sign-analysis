@@ -35,7 +35,7 @@ angular.module('SignAnalysis').controller('MainCtrl', function($scope, $interval
 			$scope.$apply(function() {
 				$scope.user.signature = new Array();
 			});
-		}, 1000);
+		}, 100);
 
 		var i = 0;
 		cons = $interval(function() {
@@ -44,7 +44,7 @@ angular.module('SignAnalysis').controller('MainCtrl', function($scope, $interval
 			if (signature.length-1 == i){
 				$scope.stop();
 			}
-		}, 500);
+		}, 100);
 
 	};
 
