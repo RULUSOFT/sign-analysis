@@ -15,7 +15,7 @@ angular.module('SignAnalysis', [])
 	return {
 		templateUrl : 'views/sigPad.html', // Use a template in an external file
 		restrict : 'E', // Must use <sigpad> element to invoke directive
-		scope : true, // Create a new scope for the directive
+		scope : false, // Create a new scope for the directive
 		require : 'ngModel', // Require the ngModel controller for the linking function
 		link : function(scope, element, attr, ctrl) {
 
