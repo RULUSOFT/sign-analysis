@@ -1,3 +1,15 @@
+/**
+ *  SignaturePad: A jQuery plugin for assisting in the creation of an HTML5 canvas
+ *  based signature pad. Records the drawn signature in JSON for later regeneration.
+ *
+ *  @project ca.thomasjbradley.applications.signaturepad
+ *  @author Thomas J Bradley <hey@thomasjbradley.ca>
+ *  @link http://thomasjbradley.ca/lab/signature-pad
+ *  @link http://github.com/thomasjbradley/signature-pad
+ *  @copyright Copyright MMXI, Thomas J Bradley
+ *  @license New BSD License
+ */
+
 @font-face {
   font-family: 'Journal';
   src: url('journal.eot');
@@ -12,7 +24,7 @@
 .sigPad {
   margin: 0;
   padding: 0;
-  width: 90%;
+  width: 400px;
 }
 
 .sigPad label {
@@ -31,7 +43,11 @@
 .sigPad input {
   margin: 0;
   padding: 0.2em 0;
-  width: 90%;
+  width: 198px;
+
+  border: 1px solid #666;
+
+  font-size: 1em;
 }
 
 .sigPad input.error {
@@ -131,6 +147,9 @@
 
 .sigWrapper {
   clear: both;
+  height: 110px;
+
+  border: 1px solid #ccc;
 }
 
 .sigWrapper.current {
@@ -143,7 +162,9 @@
 
 .pad {
   position: relative;
+}
 
+.current .pad {
   /**
    * For cross browser compatibility, this should be an absolute URL
    * In IE the cursor is relative to the HTML document
@@ -151,20 +172,12 @@
    *
    * http://www.useragentman.com/blog/2011/12/21/cross-browser-css-cursor-images-in-depth/
    */
-  cursor: url("../assets/pen.cur"), crosshair;
+  cursor: url("../build/pen.cur"), crosshair;
   /**
    * IE will ignore this line because of the hotspot position
    * Unfortunately we need this twice, because some browsers ignore the hotspot inside the .cur
    */
   cursor: url("pen.cur") 16 16, crosshair;
-
-  -ms-touch-action: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  -o-user-select: none;
-  user-select: none;
-  
 }
 
 .typed {
